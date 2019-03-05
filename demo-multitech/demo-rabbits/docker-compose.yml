@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  server:
+    build: .
+    image: ${DOCKER_REGISTRY}${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    ports:
+      - 5000
+    deploy:
+      replicas: 2
+      placement:
+        constraints:
+          - node.labels.os == windows
+    networks:
+      demo-network:
+        aliases:
+          - demo-rabbits

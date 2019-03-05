@@ -1,0 +1,14 @@
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\bin\Debug\netcoreapp2.1\demoRabbits.deps.json
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\bin\Debug\netcoreapp2.1\demoRabbits.runtimeconfig.json
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\bin\Debug\netcoreapp2.1\demoRabbits.runtimeconfig.dev.json
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\bin\Debug\netcoreapp2.1\demoRabbits.dll
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\bin\Debug\netcoreapp2.1\demoRabbits.pdb
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\obj\Debug\netcoreapp2.1\demoRabbits.csprojAssemblyReference.cache
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\obj\Debug\netcoreapp2.1\demoRabbits.csproj.CoreCompileInputs.cache
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\obj\Debug\netcoreapp2.1\demoRabbits.RazorAssemblyInfo.cache
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\obj\Debug\netcoreapp2.1\demoRabbits.RazorAssemblyInfo.cs
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\obj\Debug\netcoreapp2.1\demoRabbits.AssemblyInfoInputs.cache
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\obj\Debug\netcoreapp2.1\demoRabbits.AssemblyInfo.cs
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\obj\Debug\netcoreapp2.1\demoRabbits.RazorTargetAssemblyInfo.cache
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\obj\Debug\netcoreapp2.1\demoRabbits.dll
+C:\Users\Didier\Documents\Workspace\viseo-repo\services\demo\demo-rabbits\obj\Debug\netcoreapp2.1\demoRabbits.pdb

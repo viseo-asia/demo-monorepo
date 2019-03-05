@@ -1,0 +1,5 @@
+name=demo-proxy-swarm
+version=1
+volumes=
+type=other
+networks=demo-network

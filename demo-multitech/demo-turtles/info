@@ -1,0 +1,5 @@
+name=demo-turtles
+version=1
+volumes=
+type=golang-1.11
+networks=demo-network

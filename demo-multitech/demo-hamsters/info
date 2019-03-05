@@ -1,0 +1,5 @@
+name=demo-hamsters
+version=1
+volumes=
+type=java-8
+networks=demo-network
