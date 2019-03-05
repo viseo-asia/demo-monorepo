@@ -58,8 +58,8 @@ export default {
   data: function() {
     return {
       petTypes: [
-        { type: "cats", name: "Cats", message: "" },
-        { type: "dogs", name: "Dogs", message: "" },
+        { type: "nodejs", name: "nodejs", message: "" },
+        { type: "python", name: "python", message: "" },
         { type: "rabbits", name: "Rabbits", message: "" },
         { type: "hamsters", name: "Hamsters", message: "" },
         { type: "parrots", name: "Parrots", message: "" },

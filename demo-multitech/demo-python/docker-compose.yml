@@ -11,7 +11,7 @@ services:
     networks:
       demo-network:
         aliases:
-          - demo-dogs
+          - demo-python
 
 networks:
   demo-network:

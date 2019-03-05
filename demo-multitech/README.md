@@ -17,8 +17,8 @@ The software stack is composed of
     * `demo-web-angular`: Angular version, exposed on port 8092
 
 * Various API backends (each backend is implemented with a different technology)
-    * `demo-cats`: NodeJs (with Express)
-    * `demo-dogs`: Python (with Flask)
+    * `demo-nodejs`: NodeJs (with Express)
+    * `demo-python`: Python (with Flask)
     * `demo-hamsters`: Java (with Springboot) 
     * `demo-rabbits`: C# (using a Windows container)
     * `demo-parrots`: PHP (with Silex)

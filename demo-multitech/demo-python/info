@@ -1,4 +1,4 @@
-name=demo-dogs
+name=demo-python
 version=3
 volumes=
 type=python-3

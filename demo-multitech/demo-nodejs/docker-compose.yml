@@ -11,7 +11,7 @@ services:
     networks:
       demo-network:
         aliases:
-          - demo-cats
+          - demo-nodejs
 
 networks:
   demo-network:

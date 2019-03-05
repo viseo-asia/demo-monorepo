@@ -1,4 +1,4 @@
-name=demo-cats
+name=demo-nodejs
 version=2
 volumes=
 type=nodejs-10
