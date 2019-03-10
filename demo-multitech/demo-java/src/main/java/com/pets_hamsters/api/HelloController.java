@@ -12,7 +12,7 @@ public class HelloController {
     @RequestMapping("/")
     public String index() {
         try {
-            return "java @" + InetAddress.getLocalHost().getHostName() + " (Java 8)\n";
+            return "java @" + InetAddress.getLocalHost().getHostName() + " (Java 8 v1)\n";
         } catch (UnknownHostException e) {
             return "java @Error (Java 8)";
         }
