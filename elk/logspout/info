@@ -1,0 +1,5 @@
+name=elk-logspout
+version=1
+volumes=
+builder=null
+networks=

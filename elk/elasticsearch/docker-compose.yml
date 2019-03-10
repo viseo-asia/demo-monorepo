@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  elk-elasticsearch:
+    build: elasticsearch/
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    environment:
+      ES_JAVA_OPTS: "-Xmx2048m -Xms256m"
+    volumes:
+      - ${VOLUMES_BASE_DIR}/elk-elasticsearch:/usr/share/elasticsearch/data
+    networks:
+      elk-network:
+        aliases:
+          - elk-elasticsearch
+
+networks:
+  elk-network:
+    external: true

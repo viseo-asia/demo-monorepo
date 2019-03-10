@@ -1,0 +1,5 @@
+name=elk-logstash
+version=1
+volumes=
+builder=null
+networks=

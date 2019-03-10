@@ -1,4 +1,4 @@
-name=elk
+name=elk-kibana
 version=1
 volumes=${VOLUMES_BASE_DIR}/elk-elasticsearch
 builder=null

@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  elk-kibana:
+    build: kibana/
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    environment:
+      SERVER_BASEPATH: /kibana
+    networks:
+      elk-network:
+        aliases:
+          - elk-kibana
+
+networks:
+  elk-network:
+    external: true

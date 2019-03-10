@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+
+  elk-logspout:
+    build: logspout/
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      ROUTE_URIS: logstash://elk-logstash:5000
+      LOGSTASH_TAGS: docker-elk
+    restart: on-failure
+    deploy:
+      mode: global
+    networks:
+      elk-network:
+        aliases:
+          - elk-logspout
+
+networks:
+  elk-network:
+    external: true
