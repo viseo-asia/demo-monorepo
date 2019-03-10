@@ -6,7 +6,7 @@
   $app['debug'] = true;
 
   $app->get('/', function() use($app) {
-      return 'php @' . gethostname() . ' (PHP7)';
+      return 'php @' . gethostname() . ' (PHP7 v1)';
   });
   
   $app->run();
