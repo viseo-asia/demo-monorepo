@@ -7,10 +7,10 @@ services:
     deploy:
       replicas: 2
     networks:
-      demo-network:
+      staging-demo-network:
         aliases:
           - demo-python
 
 networks:
-  demo-network:
+  staging-demo-network:
     external: true
