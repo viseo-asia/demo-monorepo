@@ -1,0 +1,5 @@
+name=elk
+version=1
+volumes=${VOLUMES_BASE_DIR}/elk-elasticsearch
+builder=null
+networks=proxy-nginx-network
