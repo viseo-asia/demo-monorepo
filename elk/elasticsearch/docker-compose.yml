@@ -2,7 +2,7 @@ version: "3"
 
 services:
   elk-elasticsearch:
-    build: elasticsearch/
+    build: .
     image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
     environment:
       ES_JAVA_OPTS: "-Xmx2048m -Xms256m"

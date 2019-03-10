@@ -2,10 +2,10 @@ version: "3"
 
 services:
   elk-kibana:
-    build: kibana/
+    build: .
     image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
-    environment:
-      SERVER_BASEPATH: /kibana
+    ports:
+      - "8011:5601"
     networks:
       elk-network:
         aliases:
