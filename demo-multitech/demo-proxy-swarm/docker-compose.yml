@@ -1,20 +1,6 @@
-version: "3"
+version: '3'
 
 services:
   server:
     build: .
     image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
-    ports:
-      - 8090:80 # Vue
-      - 8091:81 # React
-      - 8092:82 # Angular
-    deploy:
-      replicas: 2
-    networks:
-      demo-network:
-        aliases:
-          - demo-proxy-swarm
-
-networks:
-  demo-network:
-    external: true

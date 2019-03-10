@@ -1,5 +1,5 @@
 name=demo-web-vue
-version=1
+version=1.1
 volumes=
 type=nodejs-10
 networks=demo-network

@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  server:
+    build: .
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    ports:
+      - 8090:80
+    deploy:
+      replicas: 2
+    networks:
+      dev-demo-network:
+        aliases:
+          - demo-proxy-swarm
+
+networks:
+  dev-demo-network:
+    external: true
