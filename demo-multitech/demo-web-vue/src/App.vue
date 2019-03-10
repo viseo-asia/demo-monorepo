@@ -1,6 +1,6 @@
 <template>
   <div class="container" id="app">
-    <h1>Pet Shop</h1>
+    <h1>Demo Multi Tech v1</h1>
 
     <button v-on:click="refresh" type="button" class="btn btn-secondary">Refresh</button>
 
@@ -60,10 +60,9 @@ export default {
       petTypes: [
         { type: "nodejs", name: "nodejs", message: "" },
         { type: "python", name: "python", message: "" },
-        { type: "rabbits", name: "Rabbits", message: "" },
-        { type: "hamsters", name: "Hamsters", message: "" },
-        { type: "parrots", name: "Parrots", message: "" },
-        { type: "turtles", name: "Turtles", message: "" }
+        { type: "java", name: "java", message: "" },
+        { type: "php", name: "php", message: "" },
+        { type: "go", name: "go", message: "" }
       ],
       comments: {
         origin: "",

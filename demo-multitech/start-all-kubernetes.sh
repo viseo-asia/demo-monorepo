@@ -28,7 +28,7 @@ startService demo-web-angular
 startService demo-web-react
 startService demo-nodejs
 startService demo-python
-startService demo-hamsters
-startService demo-parrots
-startService demo-turtles
+startService demo-java
+startService demo-php
+startService demo-go
 startService demo-comments

@@ -5,7 +5,7 @@ services:
     build: .
     image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
     ports:
-      - 9090:80
+      - 8090:80
     deploy:
       replicas: 2
     networks:

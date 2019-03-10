@@ -1,5 +1,5 @@
 name=demo-nodejs
-version=2.1
+version=2.2
 volumes=
 type=nodejs-10
 networks=demo-network

@@ -4,3 +4,15 @@ services:
   server:
     build: .
     image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    ports:
+      - 80:80
+    deploy:
+      replicas: 2
+    networks:
+      demo-network:
+        aliases:
+          - demo-proxy-swarm
+
+networks:
+  demo-network:
+    external: true

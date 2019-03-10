@@ -1,5 +1,0 @@
-name=demo-parrots
-version=1
-volumes=
-type=php-7
-networks=demo-network
