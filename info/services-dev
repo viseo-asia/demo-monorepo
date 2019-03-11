@@ -9,3 +9,4 @@ elk/elk-elasticsearch=999.0.0
 elk/elk-kibana=999.0.0
 elk/elk-logspout=999.0.0
 elk/elk-logstash=999.0.0
+prometheus=999.0.0
