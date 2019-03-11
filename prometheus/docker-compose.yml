@@ -5,4 +5,4 @@ services:
     build: .
     image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
     ports:
-      - "8011:5601"
+      - "8012:9090"
