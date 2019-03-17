@@ -27,7 +27,7 @@ kind: Service
 metadata:
   labels:
     app: ${SERVICE}
-  name: ${SERVICE}
+  name: ${SERVICE}-exposed
 spec:
   ports:
     - name: prometheus
