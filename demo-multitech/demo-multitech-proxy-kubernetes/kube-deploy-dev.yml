@@ -35,7 +35,7 @@ spec:
       port: 80
       protocol: TCP
       targetPort: 80
-    - name: demo-multitech-vue
+    - name: demo-multitech-metrics
       nodePort: 33101
       port: 9113
       protocol: TCP
