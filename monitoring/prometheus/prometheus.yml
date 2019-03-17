@@ -23,4 +23,4 @@ scrape_configs:
     scrape_interval: 5s
 
     static_configs:
-      - targets: ['demo-multitech-proxy-swarm:9113']
+      - targets: ['demo-multitech-proxy:9113']
