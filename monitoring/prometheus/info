@@ -1,5 +1,5 @@
 name=prometheus
-version=1.4
+version=1.5
 volumes=
 builder=null
 networks=
