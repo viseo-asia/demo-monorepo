@@ -14,17 +14,17 @@ The software stack is composed of
 
 - A single page application web frontend implemented multiple times with several technologies:
 
-  - `demo-web-vue`: VueJS version, exposed on port 8090
-  - `demo-web-react`: ReactJS version, exposed on port 8091
-  - `demo-web-angular`: Angular version, exposed on port 8092
+  - `demo-multitech-web-vue`: VueJS version, exposed on port 8090
+  - `demo-multitech-web-react`: ReactJS version, exposed on port 8091
+  - `demo-multitech-web-angular`: Angular version, exposed on port 8092
 
 - Various API backends (each backend is implemented with a different technology)
-  - `demo-nodejs`: NodeJs (with Express)
-  - `demo-python`: Python (with Flask)
-  - `demo-java`: Java (with Springboot)
-  - `demo-rabbits`: C# (using a Windows container)
-  - `demo-php`: PHP (with Silex)
-  - `demo-go`: Golang (with Gin)
+  - `demo-multitech-nodejs`: NodeJs (with Express)
+  - `demo-multitech-python`: Python (with Flask)
+  - `demo-multitech-java`: Java (with Springboot)
+  - `demo-multitech-rabbits`: C# (using a Windows container)
+  - `demo-multitech-php`: PHP (with Silex)
+  - `demo-multitech-go`: Golang (with Gin)
 
 ## Requirements
 

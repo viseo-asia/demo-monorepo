@@ -1,0 +1,5 @@
+name=demo-multitech-go
+version=1
+volumes=
+type=golang-1.11
+networks=demo-multitech-network

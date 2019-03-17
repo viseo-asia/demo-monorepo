@@ -1,5 +1,0 @@
-name=demo-proxy-kubernetes
-version=1
-volumes=
-type=other
-networks=demo-network

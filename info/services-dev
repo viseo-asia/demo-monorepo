@@ -1,10 +1,10 @@
-demo-multitech/demo-proxy-swarm=999.0.0
-demo-multitech/demo-web-vue=999.0.0
-demo-multitech/demo-nodejs=999.0.0
-demo-multitech/demo-python=999.0.0
-demo-multitech/demo-php=999.0.0
-demo-multitech/demo-go=999.0.0
-demo-multitech/demo-java=999.0.0
+demo-multitech-multitech/demo-multitech-proxy-swarm=999.0.0
+demo-multitech-multitech/demo-multitech-web-vue=999.0.0
+demo-multitech-multitech/demo-multitech-nodejs=999.0.0
+demo-multitech-multitech/demo-multitech-python=999.0.0
+demo-multitech-multitech/demo-multitech-php=999.0.0
+demo-multitech-multitech/demo-multitech-go=999.0.0
+demo-multitech-multitech/demo-multitech-java=999.0.0
 elk/elk-elasticsearch=999.0.0
 elk/elk-kibana=999.0.0
 elk/elk-logspout=999.0.0

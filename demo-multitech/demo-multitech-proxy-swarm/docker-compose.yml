@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  server:
+    build: .
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    ports:
+      - 80:80
+      - 9113:9113
+    deploy:
+      replicas: 2
+    networks:
+      demo-multitech-network:
+        aliases:
+          - demo-multitech-proxy-swarm
+      monitoring-network:
+        aliases:
+          - demo-multitech-proxy-swarm
+
+networks:
+  demo-multitech-network:
+    external: true
+  monitoring-network:
+    external: true

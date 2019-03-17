@@ -1,0 +1,5 @@
+name=demo-multitech-nodejs
+version=2.7
+volumes=
+type=nodejs-10
+networks=demo-multitech-network

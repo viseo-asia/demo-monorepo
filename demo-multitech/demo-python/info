@@ -1,5 +1,0 @@
-name=demo-python
-version=5.0
-volumes=
-type=python-3
-networks=demo-network

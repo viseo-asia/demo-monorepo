@@ -1,15 +1,15 @@
 version: '3'
 
 services:
-  prometheus:
+  grafana:
     build: .
     image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
     ports:
-      - '8012:9090'
+      - '8013:3000'
     networks:
       monitoring-network:
         aliases:
-          - prometheus
+          - prometheus-grafana
 
 networks:
   monitoring-network:

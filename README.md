@@ -1,1 +1,1 @@
-demo-monorepo
+demo-multitech-monorepo

@@ -1,0 +1,5 @@
+name=demo-multitech-web-vue
+version=1.2
+volumes=
+type=nodejs-10
+networks=demo-multitech-network

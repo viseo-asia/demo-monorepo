@@ -1,5 +1,0 @@
-name=demo-php
-version=1.1
-volumes=
-type=php-7
-networks=demo-network

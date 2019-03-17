@@ -1,0 +1,5 @@
+name=demo-multitech-java
+version=1
+volumes=
+type=java-8
+networks=demo-multitech-network

@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  server:
+    build: .
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    ports:
+      - 80
+    deploy:
+      replicas: 2
+    volumes:
+      - ${VOLUMES_BASE_DIR}/demo-multitech-comments:/opt/data
+    networks:
+      demo-multitech-network:
+        aliases:
+          - demo-multitech-comments
+
+networks:
+  demo-multitech-network:
+    external: true

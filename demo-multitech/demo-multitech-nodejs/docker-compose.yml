@@ -1,16 +1,16 @@
-version: '3'
+version: '3.7'
 
 services:
-  prometheus:
+  server:
     build: .
     image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
-    ports:
-      - '8012:9090'
+    deploy:
+      replicas: 2
     networks:
-      monitoring-network:
+      demo-multitech-network:
         aliases:
-          - prometheus
+          - demo-multitech-nodejs
 
 networks:
-  monitoring-network:
+  demo-multitech-network:
     external: true

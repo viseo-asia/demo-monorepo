@@ -1,0 +1,5 @@
+name=demo-multitech-php
+version=1.1
+volumes=
+type=php-7
+networks=demo-multitech-network
