@@ -20,7 +20,7 @@ spec:
         - image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
           name: ${SERVICE}
           ports:
-            - containerPort: 90
+            - containerPort: 9090
 ---
 apiVersion: v1
 kind: Service
@@ -30,11 +30,11 @@ metadata:
   name: ${SERVICE}
 spec:
   ports:
-    - name: demo-multitech-vue
-      nodePort: 8080
-      port: 90
+    - name: prometheus
+      nodePort: 8012
+      port: 9090
       protocol: TCP
-      targetPort: 90
+      targetPort: 9090
   selector:
     app: ${SERVICE}
   type: NodePort
