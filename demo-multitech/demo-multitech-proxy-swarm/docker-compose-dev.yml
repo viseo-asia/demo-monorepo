@@ -9,10 +9,17 @@ services:
     deploy:
       replicas: 2
     networks:
-      dev-demo-multitech-network:
+      demo-multitech-network:
         aliases:
           - demo-multitech-proxy-swarm
+          - demo-multitech-proxy
+      monitoring-network:
+        aliases:
+          - demo-multitech-proxy-swarm
+          - demo-multitech-proxy
 
 networks:
-  dev-demo-multitech-network:
+  demo-multitech-network:
+    external: true
+  monitoring-network:
     external: true

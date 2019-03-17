@@ -13,9 +13,11 @@ services:
       demo-multitech-network:
         aliases:
           - demo-multitech-proxy-swarm
+          - demo-multitech-proxy
       monitoring-network:
         aliases:
           - demo-multitech-proxy-swarm
+          - demo-multitech-proxy
 
 networks:
   demo-multitech-network:

@@ -44,3 +44,17 @@ spec:
   selector:
     app: ${SERVICE}
   type: NodePort
+---
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-multitech-proxy
+spec:
+  ports:
+    - name: pod-port
+      protocol: "TCP"
+      port: 9113
+      targetPort: 9113
+  selector:
+    app: ${SERVICE}
