@@ -1,0 +1,4 @@
+all:
+  hosts:
+    dummy:
+      ansible_host: a-dummy-entry

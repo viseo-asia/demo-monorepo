@@ -1,0 +1,5 @@
+name=vault
+version=1
+volumes=${VOLUMES_BASE_DIR}/vault
+builder=null
+networks=ci-cd-network

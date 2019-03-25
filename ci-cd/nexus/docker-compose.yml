@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  server:
+    build: .
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    ports:
+      - 8081:8081
+    volumes:
+      - ${VOLUMES_BASE_DIR}/nexus:/sonatype-work
+    networks:
+      proxy-nginx-network:
+        aliases:
+          - nexus
+      ci-cd-network:
+        aliases:
+          - nexus
+
+networks:
+  proxy-nginx-network:
+    external: true
+  ci-cd-network:
+    external: true

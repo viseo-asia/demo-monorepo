@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  server:
+    build: .
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    environment:
+      ANSIBLE_HOST_KEY_CHECKING: "False"
+    hostname: ansible
+    networks:
+      ci-cd-network:
+        aliases:
+          - ansible
+
+networks:
+  ci-cd-network:
+    external: true

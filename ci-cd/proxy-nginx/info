@@ -1,0 +1,5 @@
+name=proxy-nginx
+version=1
+volumes=
+builder=null
+networks=proxy-nginx-network

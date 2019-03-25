@@ -1,0 +1,5 @@
+name=ansible
+version=1
+volumes=
+builder=null
+networks=ci-cd-network

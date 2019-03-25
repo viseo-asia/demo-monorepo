@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  server:
+    build: .
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    hostname: svn-server
+    ports:
+      - 80
+    volumes:
+      - ${VOLUMES_BASE_DIR}/svn-server:/opt/svn/
+    environment:
+      - JENKINS_USER=jenkins
+      - JENKINS_PW=1195b91ccb852cce2fa9b5f8d22a944f0f
+      - JENKINS_COMMIT_JOB=svn-build
+      - JENKINS_TOKEN=TOKEN
+    networks:
+      proxy-nginx-network:
+        aliases:
+          - svn-server
+      ci-cd-network:
+        aliases:
+          - svn-server
+
+networks:
+  proxy-nginx-network:
+    external: true
+  ci-cd-network:
+    external: true
