@@ -19,21 +19,21 @@ function startService {
     echo ''
     echo "-- SERVICE: ${1}"
     cd ${ROOT_DIR}/$1
-    ../start-service-kubernetes.sh .
+    ../../start-service-kubernetes.sh .
 }
 
-startService demo-multitech-proxy-kubernetes
-startService demo-multitech-web-vue
-startService demo-multitech-nodejs
-startService demo-multitech-python
-startService demo-multitech-java
-startService demo-multitech-php
-startService demo-multitech-go
-startService demo-multitech-comments
+startService demo-multitech/demo-multitech-proxy-kubernetes
+startService demo-multitech/demo-multitech-web-vue
+startService demo-multitech/demo-multitech-nodejs
+startService demo-multitech/demo-multitech-python
+startService demo-multitech/demo-multitech-java
+startService demo-multitech/demo-multitech-php
+startService demo-multitech/demo-multitech-go
+startService demo-multitech/demo-multitech-comments
 
-startService monitoring/elk-elasticsearch
-startService monitoring/elk-kibana
-startService monitoring/elk-logspout
-startService monitoring/elk-logstash
-startService monitoring/prometheus
-startService monitoring/prometheus-grafana
+# startService monitoring/elk-elasticsearch
+# startService monitoring/elk-kibana
+# startService monitoring/elk-logspout
+# startService monitoring/elk-logstash
+# startService monitoring/prometheus
+# startService monitoring/prometheus-grafana

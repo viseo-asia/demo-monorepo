@@ -46,6 +46,10 @@
       <br>
       <small>{{ new Date(comment.date).toLocaleString() }}</small>
     </div>
+
+    <h6>Visits</h6>
+    <p>Count: {{ visits.counterMessage }}</p>
+    <p>{{ visits.trackerMessage }}</p>
   </div>
 </template>
 
@@ -68,11 +72,16 @@ export default {
         origin: "",
         items: []
       },
+      visits: {
+        trackerMessage: "",
+        counterMessage: "0"
+      },
       commentInput: ""
     };
   },
   created: function() {
     this.refresh();
+    this.trackVisit();
   },
   methods: {
     refresh: function() {
@@ -80,6 +89,7 @@ export default {
         this.getPetInfo(i);
       }
       this.getComments();
+      this.countVisit();
     },
     getPetInfo: function(index) {
       axios
@@ -89,6 +99,26 @@ export default {
         })
         .catch(() => {
           this.petTypes[index].message = "Error gettting content.";
+        });
+    },
+    trackVisit: function() {
+      axios
+        .get(`/api-visits-tracker/`)
+        .then(() => {
+          this.visits.trackerMessage = "";
+        })
+        .catch(() => {
+          this.visits.trackerMessage = "Error tracking visit";
+        });
+    },
+    countVisit: function() {
+      axios
+        .get(`/api-visits-counter/`)
+        .then(response => {
+          this.visits.counterMessage = response.data;
+        })
+        .catch(() => {
+          this.visits.counterMessage = "Error counting visits";
         });
     },
     getComments: function() {

@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  mongodb-1:
+    build: .
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    volumes:
+      - ${VOLUMES_BASE_DIR}/mongodb-1:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongo_admin
+      - MONGO_INITDB_ROOT_PASSWORD=password_test
+    hostname: mongodb-1
+    networks:
+      demo-multitech-network:
+        aliases:
+          - mongodb
+          - mongodb-1
+
+networks:
+  demo-multitech-network:
+    external: true

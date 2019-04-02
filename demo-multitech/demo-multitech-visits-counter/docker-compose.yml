@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  server:
+    build: .
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    deploy:
+      replicas: 2
+    networks:
+      demo-multitech-network:
+        aliases:
+          - demo-multitech-nodejs
+
+networks:
+  demo-multitech-network:
+    external: true

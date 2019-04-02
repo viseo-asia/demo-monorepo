@@ -1,35 +1,43 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const fse = require("fs-extra");
+const express = require('express');
+const bodyParser = require('body-parser');
+const fse = require('fs-extra');
+const mongodb = require('mongodb');
+
 const app = express();
 const port = 80;
+let database;
 
-const DB_FILE = "/opt/data/comments.json";
+const DB_FILE = '/opt/data/comments.json';
 
 if (!fse.existsSync(DB_FILE)) {
   fse.ensureFileSync(DB_FILE);
   fse.writeJSON(DB_FILE, []);
 }
 
+const MongoClient = mongodb.MongoClient;
+const url = 'mongodb://demo-multitech-mongodb-node-1:27017/comments';
+
+MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
+  if (err) {
+    console.log(err);
+  } else {
+    database = client.db('comments');
+  }
+});
+
 app.use(bodyParser.json());
 
-app.get("/", async (req, res) => {
-  const comments = await fse.readJSON(DB_FILE);
+app.get('/', async (req, res) => {
+  const collection = database.collection('comments');
   res.send({
     origin: process.env.HOSTNAME,
-    items: comments
+    items: await collection.find().toArray()
   });
 });
 
-app.put("/", async (req, res) => {
-  if (!req.body || !req.body.text) {
-    res.send();
-    return;
-  }
-  let comments = await fse.readJSON(DB_FILE);
-  comments.unshift({ text: req.body.text, date: new Date() });
-  comments = comments.splice(0, 5);
-  await fse.writeJSON(DB_FILE, comments);
+app.put('/', async (req, res) => {
+  const collection = database.collection('comments');
+  await collection.insert({ text: req.body.text, date: new Date() });
   res.send();
 });
 
