@@ -1,0 +1,5 @@
+name=jenkins
+version=1
+volumes=${VOLUMES_BASE_DIR}/jenkins
+builder=null
+networks=proxy-nginx-network;ci-cd-network

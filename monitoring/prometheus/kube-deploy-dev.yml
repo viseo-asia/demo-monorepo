@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${SERVICE}
+  labels:
+    app: ${SERVICE}
+  annotations:
+    monitoring: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ${SERVICE}
+  template:
+    metadata:
+      labels:
+        app: ${SERVICE}
+    spec:
+      containers:
+        - image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+          name: ${SERVICE}
+          ports:
+            - containerPort: 9090
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ${SERVICE}
+  name: ${SERVICE}-exposed
+spec:
+  ports:
+    - name: prometheus
+      nodePort: 33201
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+  selector:
+    app: ${SERVICE}
+  type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+spec:
+  ports:
+    - name: pod-port
+      protocol: "TCP"
+      port: 9090
+      targetPort: 9090
+  selector:
+    app: ${SERVICE}

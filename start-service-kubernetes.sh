@@ -19,7 +19,7 @@ cd ${SERVICE_DIR}
 
 # Stage
 if [ "$2" == "" ]; then
-  STAGE=""
+  STAGE="dev"
 else
   STAGE=${2}
   echo "Stage: ${STAGE}"
@@ -68,5 +68,5 @@ cat ${KUBE_FILE_DEPLOY} \
   | sed "s/\${VOLUMES_BASE_DIR}/${VOLUMES_BASE_DIR_ESCAPED}/g" \
   | sed "s/\${STAGE}/${STAGE}/g" > .tmp_${KUBE_FILE_DEPLOY}
 
-kubectl apply -f .tmp_${KUBE_FILE_DEPLOY}
+kubectl apply -n ${STAGE}-env -f .tmp_${KUBE_FILE_DEPLOY}
 rm -f .tmp_${KUBE_FILE_DEPLOY}

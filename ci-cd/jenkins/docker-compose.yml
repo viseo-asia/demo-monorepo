@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  server:
+    build: .
+    image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+    hostname: jenkins
+    ports:
+      - 8080:8080
+    environment:
+      - DOCKER_DTR_HOST=docker_dtr_host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${VOLUMES_BASE_DIR}/jenkins:/var/jenkins_home
+    networks:
+      proxy-nginx-network:
+        aliases:
+          - jenkins
+      ci-cd-network:
+        aliases:
+          - jenkins
+
+networks:
+  proxy-nginx-network:
+    external: true
+  ci-cd-network:
+    external: true

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${SERVICE}-node
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ${SERVICE}-node
+  template:
+    metadata:
+      labels:
+        app: ${SERVICE}-node
+      annotations:
+        sidecar.istio.io/inject: 'false'
+    spec:
+      containers:
+        - name: ${SERVICE}-node
+          image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+          ports:
+            - containerPort: 4222
+            - containerPort: 6222
+            - containerPort: 8222
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${SERVICE}-node
+spec:
+  ports:
+    - name: client
+      protocol: 'TCP'
+      port: 4222
+      targetPort: 4222
+    - name: cluster
+      protocol: 'TCP'
+      port: 6222
+      targetPort: 6222
+    - name: monitor
+      protocol: 'TCP'
+      port: 8222
+      targetPort: 8222
+  selector:
+    app: ${SERVICE}-node

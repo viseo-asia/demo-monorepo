@@ -1,0 +1,5 @@
+name=demo-multitech-mongodb
+version=1
+volumes=${VOLUMES_BASE_DIR}/demo-multitech-mongodb-1;${VOLUMES_BASE_DIR}/demo-multitech-mongodb-2
+builder=null
+networks=mongodb-network

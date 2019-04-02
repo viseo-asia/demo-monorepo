@@ -1,0 +1,5 @@
+name=svn-server
+version=1
+volumes=${VOLUMES_BASE_DIR}/svn-server
+builder=null
+networks=proxy-nginx-network;ci-cd-network
